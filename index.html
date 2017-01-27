@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>  
+        <title>movies</title>
+        <!--add css file-->
+        <link rel="stylesheet" href="style.css">
+        <!--add js file-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+        <script src="https://use.fontawesome.com/42c673eaeb.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <!--ng-app is needed-->
+    <body ng-app="MovieApp">
+        <h1>Movies Rating</h1>
+       
+        <!--this section for displaying movie list and rating-->
+        <section ng-controller="ShowMovieController">
+            <ul>
+                <li ng-repeat="movie in movies">
+                    <h2>{{ movie.title }}</h2>
+                    <img ng-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{ movie.poster_path  }}">
+                    <p>Overview: {{ movie.overview }}<p>
+                    <p>Genre: {{ movie.genre }} </p>
+                    <p>Release Date: {{ movie.date }}</p>
+                    <p>Rating:
+                        <div>
+                            <button ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 1)">
+<i class="fa fa-star-o " aria-hidden="true"></i></button>
+                            <button ng-show="">test</button>
+                            <button ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 2)">
+<i class="fa fa-star-o" aria-hidden="true"></i></button>
+                            <button ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 3)">
+<i class="fa fa-star-o" aria-hidden="true"></i></button>
+                            <button ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 4)">
+<i class="fa fa-star-o" aria-hidden="true"></i></button>
+                            <button ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 5)">
+<i class="fa fa-star-o" aria-hidden="true"></i></button>
+                            <button ng-click="count =  + 1" ng-init="count=0">
+                                Increment
+                                </button>
+                                <span>
+                                {{count}}
+                                </span>
+                        </div>
+                    </p>
+                    
+                </li>
+            </ul>
+        </section>
+    </body>
+</html>
