@@ -26,21 +26,25 @@
                         <div>
                             <button ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 1)">
 <i class="fa fa-star-o " aria-hidden="true"></i></button>
-                            <button ng-show="">test</button>
+                            <button ng-show="movie.isFavorite"><i class="fa fa-star" aria-hidden="true"></i>
+</button>
                             <button ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 2)">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
+                            <button ng-show="movie.stars >= 2" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
+</button>
+
                             <button ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 3)">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
+                            <button ng-show="movie.stars >= 3" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
+</button>
                             <button ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 4)">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
+                            <button ng-show="movie.stars >= 4" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
+</button>
                             <button ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 5)">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
-                            <button ng-click="count =  + 1" ng-init="count=0">
-                                Increment
-                                </button>
-                                <span>
-                                {{count}}
-                                </span>
+                            <button ng-show="movie.stars >= 5" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
+</button>
                         </div>
                     </p>
                     
