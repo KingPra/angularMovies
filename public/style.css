@@ -5,6 +5,152 @@
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
+body {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url("http://sf.co.ua/14/07/wallpaper-1149775.jpg");
+  background-color: #a4bab7;
+  font-family: 'Playfair Display SC', serif; }
+  body::before, body::after {
+    display: table;
+    content: ' '; }
+  body::after {
+    clear: both; }
+
+.head {
+  width: 100%;
+  float: left;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  text-align: center;
+  font-size: 3em;
+  color: #eff2c0; }
+  @media print, screen and (min-width: 40em) {
+    .head {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  .head:last-child:not(:first-child) {
+    float: right; }
+
+ul {
+  list-style-type: none; }
+
+#movieBox {
+  width: 100%;
+  float: left;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  border: 1px solid #080f0f;
+  text-align: center;
+  background: #fff;
+  list-style: none;
+  color: #080f0f; }
+  @media print, screen and (min-width: 40em) {
+    #movieBox {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  #movieBox:last-child:not(:first-child) {
+    float: right; }
+  @media print, screen and (min-width: 64em) {
+    #movieBox {
+      width: 100%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
+      opacity: 0.8; } }
+  @media print, screen and (min-width: 64em) and (min-width: 40em) {
+    #movieBox {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  @media print, screen and (min-width: 64em) {
+      #movieBox:last-child:not(:first-child) {
+        float: right; } }
+
+.image {
+  margin: 10px auto;
+  width: 100%;
+  float: left;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem; }
+  @media print, screen and (min-width: 40em) {
+    .image {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  .image:last-child:not(:first-child) {
+    float: right; }
+  @media print, screen and (min-width: 64em) {
+    .image {
+      width: 33.33333%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
+      text-align: left;
+      margin: 20px auto; } }
+  @media print, screen and (min-width: 64em) and (min-width: 40em) {
+    .image {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  @media print, screen and (min-width: 64em) {
+      .image:last-child:not(:first-child) {
+        float: right; } }
+
+.overview {
+  margin: 0 auto;
+  text-align: left;
+  width: 80%; }
+  @media print, screen and (min-width: 64em) {
+    .overview {
+      width: 66.66667%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
+      font-size: 0.5em; } }
+  @media print, screen and (min-width: 64em) and (min-width: 40em) {
+    .overview {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  @media print, screen and (min-width: 64em) {
+      .overview:last-child:not(:first-child) {
+        float: right; } }
+
+.rating {
+  width: 100%; }
+  @media print, screen and (min-width: 64em) {
+    .rating {
+      width: 100%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
+      font-size: 2.0em; } }
+  @media print, screen and (min-width: 64em) and (min-width: 40em) {
+    .rating {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  @media print, screen and (min-width: 64em) {
+      .rating:last-child:not(:first-child) {
+        float: right; } }
+
+.btn1:hover {
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px black; }
+
+.btn2:hover {
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px black; }
+
+.btn3:hover {
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px black; }
+
+.btn4:hover {
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px black; }
+
+.btn5:hover {
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px black; }
+
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
        ========================================================================== */
@@ -1289,8 +1435,9 @@ ul {
   float: left;
   padding-right: 0.625rem;
   padding-left: 0.625rem;
+  border: 1px solid #080f0f;
   text-align: center;
-  background: white;
+  background: #fff;
   list-style: none;
   color: #080f0f; }
   @media print, screen and (min-width: 40em) {
@@ -1305,8 +1452,7 @@ ul {
       float: left;
       padding-right: 0.625rem;
       padding-left: 0.625rem;
-      opacity: 0.8;
-      border: 1px solid #080f0f; } }
+      opacity: 0.8; } }
   @media print, screen and (min-width: 64em) and (min-width: 40em) {
     #movieBox {
       padding-right: 0.9375rem;
@@ -1315,22 +1461,33 @@ ul {
       #movieBox:last-child:not(:first-child) {
         float: right; } }
 
-@media print, screen and (min-width: 64em) {
-  .image {
-    width: 33.33333%;
-    float: left;
-    padding-right: 0.625rem;
-    padding-left: 0.625rem;
-    text-align: left;
-    margin: 20px auto; } }
+.image {
+  margin: 10px auto;
+  width: 100%;
+  float: left;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem; }
+  @media print, screen and (min-width: 40em) {
+    .image {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  .image:last-child:not(:first-child) {
+    float: right; }
+  @media print, screen and (min-width: 64em) {
+    .image {
+      width: 33.33333%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
+      text-align: left;
+      margin: 20px auto; } }
   @media print, screen and (min-width: 64em) and (min-width: 40em) {
     .image {
       padding-right: 0.9375rem;
       padding-left: 0.9375rem; } }
-
-@media print, screen and (min-width: 64em) {
-    .image:last-child:not(:first-child) {
-      float: right; } }
+  @media print, screen and (min-width: 64em) {
+      .image:last-child:not(:first-child) {
+        float: right; } }
 
 .overview {
   margin: 0 auto;
@@ -1350,43 +1507,3 @@ ul {
   @media print, screen and (min-width: 64em) {
       .overview:last-child:not(:first-child) {
         float: right; } }
-
-.rating {
-  width: 100%; }
-  @media print, screen and (min-width: 64em) {
-    .rating {
-      width: 100%;
-      float: left;
-      padding-right: 0.625rem;
-      padding-left: 0.625rem;
-      font-size: 2.0em; } }
-  @media print, screen and (min-width: 64em) and (min-width: 40em) {
-    .rating {
-      padding-right: 0.9375rem;
-      padding-left: 0.9375rem; } }
-  @media print, screen and (min-width: 64em) {
-      .rating:last-child:not(:first-child) {
-        float: right; } }
-
-.btn1:hover {
-  outline-offset: 15px;
-  text-shadow: 1px 1px 2px black; }
-
-.btn2:hover {
-  outline-offset: 15px;
-  text-shadow: 1px 1px 2px black; }
-
-.btn3:hover {
-  outline-offset: 15px;
-  text-shadow: 1px 1px 2px black; }
-
-.btn4:hover {
-  outline-offset: 15px;
-  text-shadow: 1px 1px 2px black; }
-
-.btn5:hover {
-  outline-offset: 15px;
-  text-shadow: 1px 1px 2px black; }
-
-.red {
-  background-color: red; }

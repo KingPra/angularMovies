@@ -17,7 +17,7 @@
     <!--this section for displaying movie list and rating-->
     <section ng-controller="ShowMovieController">
         <header class="head">
-            <h1>Watch Or Not</h1>
+            <h1>Movie Rater</h1>
         <header>
         <ul>
             <li ng-repeat="movie in movies">
@@ -29,29 +29,29 @@
                         </p>
                         <p><strong>Release Date:</strong> {{ movie.release_date }}</p>        
                         <div class="rating">
-                            <p ng-hide="movie.isFavorite"> Click stars to rate this movie:<br></p>
+                            <p ng-hide="movie.isRated"> Click stars to rate this movie:<br></p>
                             <!--group 1 button-->
-                            <button class="btn1" ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 1)">
+                            <button class="btn1" ng-hide="movie.isRated" ng-click="ratedMovie(movie, 1)">
 <i class="fa fa-star-o " aria-hidden="true"></i></button>
-                            <button ng-show="movie.isFavorite"><i class="fa fa-star" aria-hidden="true"></i>
+                            <button ng-show="movie.isRated"><i class="fa fa-star" aria-hidden="true"></i>
                             </button>
                             <!--group 2 button-->
-                            <button class="btn2" ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 2)">
+                            <button class="btn2" ng-hide="movie.isRated" ng-click="ratedMovie(movie, 2)">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
                             <button ng-show="movie.stars >= 2" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
                             </button>
                             <!--group 3 button-->
-                            <button class="btn3" ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 3)">
+                            <button class="btn3" ng-hide="movie.isRated" ng-click="ratedMovie(movie, 3)">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
                             <button ng-show="movie.stars >= 3" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
                             </button>
                             <!--group 4 button-->
-                            <button class="btn4" ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 4)">
+                            <button class="btn4" ng-hide="movie.isRated" ng-click="ratedMovie(movie, 4)">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
                             <button ng-show="movie.stars >= 4" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
                             </button>
                             <!--group 5 button-->
-                            <button class="btn5" ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 5)">
+                            <button class="btn5" ng-hide="movie.isRated" ng-click="ratedMovie(movie, 5)">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
                             <button ng-show="movie.stars >= 5" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
                             </button>
