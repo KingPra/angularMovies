@@ -1,55 +1,66 @@
 <!doctype html>
 <html>
-    <head>  
-        <title>movies</title>
-        <!--add css file-->
-        <link rel="stylesheet" href="style.css">
-        <!--add js file-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
-        <script src="https://use.fontawesome.com/42c673eaeb.js"></script>
-        <script src="app.js"></script>
-    </head>
-    <!--ng-app is needed-->
-    <body ng-app="MovieApp">
-        <h1>Movies Rating</h1>
-       
-        <!--this section for displaying movie list and rating-->
-        <section ng-controller="ShowMovieController">
-            <ul>
-                <li ng-repeat="movie in movies">
-                    <h2>{{ movie.title }}</h2>
-                    <img ng-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{ movie.poster_path  }}">
-                    <p>Overview: {{ movie.overview }}<p>
-                    <p>Genre: {{ movie.genre }} </p>
-                    <p>Release Date: {{ movie.date }}</p>
-                    <p>Rating:
-                        <div>
-                            <button ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 1)">
+
+<head>
+    <title>movies</title>
+    <!--add css file-->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+    <!--add js file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://use.fontawesome.com/42c673eaeb.js"></script>
+    <script src="app.js"></script>
+</head>
+<!--ng-app is needed-->
+
+<body ng-app="MovieApp">
+    <!--this section for displaying movie list and rating-->
+    <section ng-controller="ShowMovieController">
+        <header class="head">
+            <h1>Watch Or Not</h1>
+        <header>
+        <ul>
+            <li ng-repeat="movie in movies">
+                <div id="movieBox">
+                    <img class="image" ng-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{ movie.poster_path  }}">
+                    <div class="overview">
+                        <h2 class="title">{{ movie.title }}</h2>
+                        <p><strong>Overview:</strong> {{ movie.overview }}
+                        </p>
+                        <p><strong>Release Date:</strong> {{ movie.release_date }}</p>        
+                        <div class="rating">
+                            <p ng-hide="movie.isFavorite"> Click stars to rate this movie:<br></p>
+                            <!--group 1 button-->
+                            <button class="btn1" ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 1)">
 <i class="fa fa-star-o " aria-hidden="true"></i></button>
                             <button ng-show="movie.isFavorite"><i class="fa fa-star" aria-hidden="true"></i>
-</button>
-                            <button ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 2)">
+                            </button>
+                            <!--group 2 button-->
+                            <button class="btn2" ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 2)">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
                             <button ng-show="movie.stars >= 2" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
-</button>
-
-                            <button ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 3)">
+                            </button>
+                            <!--group 3 button-->
+                            <button class="btn3" ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 3)">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
                             <button ng-show="movie.stars >= 3" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
-</button>
-                            <button ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 4)">
+                            </button>
+                            <!--group 4 button-->
+                            <button class="btn4" ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 4)">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
                             <button ng-show="movie.stars >= 4" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
-</button>
-                            <button ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 5)">
+                            </button>
+                            <!--group 5 button-->
+                            <button class="btn5" ng-hide="movie.isFavorite" ng-click="favoriteMovie(movie, 5)">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
                             <button ng-show="movie.stars >= 5" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
-</button>
+                            </button>
                         </div>
-                    </p>
-                    
-                </li>
-            </ul>
-        </section>
-    </body>
+                        </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+</body>
+
 </html>
