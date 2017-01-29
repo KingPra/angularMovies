@@ -26,6 +26,12 @@ app.factory('MovieService', function ($http) {
         },
         markAsRated(fav, num) {
             fav.isRated = true;
+            fav.one = true;
+            fav.two = true;
+            fav.three = true;
+            fav.four = true;
+            fav.five = true;
+            fav.all = true;
             fav.stars = num;
         },
     };

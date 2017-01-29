@@ -11,20 +11,13 @@
 .btn1:hover {
     outline-offset: 15px;
     text-shadow: 1px 1px 2px black;
+    //fill-opacity: 0.6;
+    fill: red;
 }
-.btn2:hover{
+
+.btn {
     outline-offset: 15px;
     text-shadow: 1px 1px 2px black;
-}
-.btn3:hover {
-    outline-offset: 15px;
-    text-shadow: 1px 1px 2px black;
-}
-.btn4:hover {
-    outline-offset: 15px;
-    text-shadow: 1px 1px 2px black;
-}
-.btn5:hover {
-    outline-offset: 15px;
-    text-shadow: 1px 1px 2px black;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    fill: red;
 }

@@ -17,7 +17,7 @@
     <!--this section for displaying movie list and rating-->
     <section ng-controller="ShowMovieController">
         <header class="head">
-            <h1>Movie Rater</h1>
+            <h1>Movie Emporeum</h1>
         <header>
         <ul>
             <li ng-repeat="movie in movies">
@@ -30,28 +30,42 @@
                         <p><strong>Release Date:</strong> {{ movie.release_date }}</p>        
                         <div class="rating">
                             <p ng-hide="movie.isRated"> Click stars to rate this movie:<br></p>
+
+
                             <!--group 1 button-->
-                            <button class="btn1" ng-hide="movie.isRated" ng-click="ratedMovie(movie, 1)">
+                            <button ng-mouseenter="movie.one = true" ng-mouseleave="movie.one = false" class="btn1" ng-hide="movie.isRated || movie.two || movie.three || movie.four || movie.five" ng-click="ratedMovie(movie, 1) ">
 <i class="fa fa-star-o " aria-hidden="true"></i></button>
                             <button ng-show="movie.isRated"><i class="fa fa-star" aria-hidden="true"></i>
                             </button>
+                            <button class="btn" ng-show="movie.two || movie.three || movie.four || movie.five"><i class="fa fa-star-o" aria-hidden="true"></i>
+                            </button>
+
                             <!--group 2 button-->
-                            <button class="btn2" ng-hide="movie.isRated" ng-click="ratedMovie(movie, 2)">
+                            <button ng-mouseenter="movie.two = true" ng-mouseleave="movie.two = false"class="btn1" ng-hide="movie.isRated  || movie.three || movie.four || movie.five" ng-click="ratedMovie(movie, 2); movie.one = false; movie.two = false; movie.three = false; movie.four = false; movie.five = false">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
                             <button ng-show="movie.stars >= 2" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
                             </button>
+                            <button class="btn" ng-show="movie.three || movie.four || movie.five"><i class="fa fa-star-o" aria-hidden="true"></i>
+                            </button>
+
                             <!--group 3 button-->
-                            <button class="btn3" ng-hide="movie.isRated" ng-click="ratedMovie(movie, 3)">
+                            <button ng-mouseenter="movie.three = true" ng-mouseleave="movie.three = false"class="btn1" ng-hide="movie.isRated || movie.four || movie.five" ng-click="ratedMovie(movie, 3);  movie.one = false; movie.two = false; movie.three = false; movie.four = false; movie.five = false">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
                             <button ng-show="movie.stars >= 3" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
                             </button>
+                            <button class="btn" ng-show="movie.four || movie.five"><i class="fa fa-star-o" aria-hidden="true"></i>
+                            </button>
+
                             <!--group 4 button-->
-                            <button class="btn4" ng-hide="movie.isRated" ng-click="ratedMovie(movie, 4)">
+                            <button ng-mouseenter="movie.four = true" ng-mouseleave="movie.four = false" class="btn1" ng-hide="movie.isRated || movie.five" ng-click="ratedMovie(movie, 4);  movie.one = false; movie.two = false; movie.three = false; movie.four = false; movie.five = false">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
                             <button ng-show="movie.stars >= 4" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
                             </button>
+                            <button class="btn" ng-show="movie.five"><i class="fa fa-star-o" aria-hidden="true"></i>
+                            </button>
+
                             <!--group 5 button-->
-                            <button class="btn5" ng-hide="movie.isRated" ng-click="ratedMovie(movie, 5)">
+                            <button ng-mouseenter="movie.five = true" ng-mouseleave="movie.five = false" class="btn1" ng-hide="movie.isRated" ng-click="ratedMovie(movie, 5);  movie.one = false; movie.two = false; movie.three = false; movie.four = false; movie.five = false">
 <i class="fa fa-star-o" aria-hidden="true"></i></button>
                             <button ng-show="movie.stars >= 5" class="ng-hide"><i class="fa fa-star" aria-hidden="true"></i>
                             </button>
