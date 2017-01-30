@@ -6,7 +6,7 @@
  * Licensed under MIT Open Source
  */
 .rating {
-  width: 100%; }
+  margin-bottom: 50px; }
   @media print, screen and (min-width: 64em) {
     .rating {
       width: 100%;
@@ -23,15 +23,17 @@
         float: right; } }
 
 .btn1:hover {
-  outline-offset: 15px;
   text-shadow: 1px 1px 2px black;
   fill: red; }
 
 .btn {
-  outline-offset: 15px;
   text-shadow: 1px 1px 2px black;
-  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 350ms cubic-bezier(0.19, 1, 0.22, 1);
   fill: red; }
+
+.nav {
+  border: 1px solid white;
+  background-color: grey; }
 
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
@@ -1388,4 +1390,31 @@ ul {
       padding-left: 0.9375rem; } }
   @media print, screen and (min-width: 64em) {
       .overview:last-child:not(:first-child) {
+        float: right; } }
+
+.descrip {
+  width: 100%;
+  float: left;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: none; }
+  @media print, screen and (min-width: 40em) {
+    .descrip {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  .descrip:last-child:not(:first-child) {
+    float: right; }
+  @media print, screen and (min-width: 64em) {
+    .descrip {
+      width: 100%;
+      float: left;
+      padding-right: 0.625rem;
+      padding-left: 0.625rem;
+      display: block; } }
+  @media print, screen and (min-width: 64em) and (min-width: 40em) {
+    .descrip {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+  @media print, screen and (min-width: 64em) {
+      .descrip:last-child:not(:first-child) {
         float: right; } }

@@ -1,12 +1,14 @@
 const app = angular.module('MovieApp', []);
 
-
 app.controller('ShowMovieController', function ($scope, MovieService) {
     $scope.movies = MovieService.getAll();
-
     $scope.ratedMovie = function (target, num) {
         MovieService.markAsRated(target, num);
     };
+
+      function pushIt ($scope) {
+    console.log('push it real good');
+};
 
 });
 
