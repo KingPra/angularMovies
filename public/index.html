@@ -20,8 +20,8 @@
             <h1>Movie Emporeum</h1>
         <header>
             <nav id="navBar">
-                <button ng-click="" class="nav btn" >does nothing</button>
-                <button ng-click="pushIt()" class="nav btn" id="showRated">my favs</button>
+                <button ng-click="movie.all = false" ng-show="movie.all" class="nav btn" >does nothing</button>
+                <button ng-click="movie.all = true" ng-hide="movie.all"class="nav btn" id="showRated">my favs</button>
             </nav>
         <ul>
             <li ng-repeat="movie in movies">
@@ -31,7 +31,7 @@
                         <h2 class="title">{{ movie.title }}</h2>
                         <p class="descrip"><strong>Overview:</strong> {{ movie.overview }}
                         </p>
-                        <p><strong>Release Date:</strong> {{ movie.release_date }}</p>        
+                        <p><strong>Release Date:</strong> {{ movie.release_date | date:'MMM/yyyy' }}</p>        
                         <div class="rating">
                             <p ng-hide="movie.isRated"> Click stars to rate this movie:<br></p>
 
@@ -79,6 +79,9 @@
                     </li>
                 </ul>
             </section>
+            <section ng-controller="RatedMovieController"
+                <h1>testing rated movies</h1>
+            ></section>
 </body>
 
 </html>

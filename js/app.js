@@ -6,10 +6,12 @@ app.controller('ShowMovieController', function ($scope, MovieService) {
         MovieService.markAsRated(target, num);
     };
 
-      function pushIt ($scope) {
-    console.log('push it real good');
-};
+});
 
+app.controller('RatedMovieController', function ($scope, MovieService) {
+    $scope.movies = MovieService.getAll();
+    console.log($scope.movies.fav);
+    console.log('ratedMovieController here');
 });
 
 app.factory('MovieService', function ($http) {
